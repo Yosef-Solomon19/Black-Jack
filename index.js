@@ -23,6 +23,15 @@ function getRandomCard() {
     }
 }
 
+function startGame() {
+    isAlive = true;
+    firstCard = getRandomCard()
+    secondCard = getRandomCard()
+    sum = firstCard + secondCard 
+    cards = [firstCard, secondCard]
+    renderGame()
+}
+
 function renderGame() { // creating a function to continue the game. 
     cardsEl.textContent = "Cards: "  // Selecting the cardsEl to display "Cards:"
     for (let i = 0; i < cards.length; i++) { // For every element that is inside the cards array
