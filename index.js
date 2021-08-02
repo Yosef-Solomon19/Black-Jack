@@ -56,8 +56,13 @@ function renderGame() {                         // creating a function to contin
 }
 
 function newCard () {
-    let card = getRandomCard() ; 
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (isAlive === true && hasBlackJack === false) { // if the player is still alive AND does not have have blackjack 
+                                                      // the block of code inside the if statement allows the player to get a new card 
+                                                     // if these two conditions are met.
+        let card = getRandomCard() ; 
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
+    
 }
