@@ -24,7 +24,7 @@ function getRandomCard() {
 }
 
 function startGame() {
-    isAlive = true;
+    isAlive = true;                 
     firstCard = getRandomCard()
     secondCard = getRandomCard()
     sum = firstCard + secondCard 
@@ -32,15 +32,15 @@ function startGame() {
     renderGame()
 }
 
-function renderGame() { // creating a function to continue the game. 
-    cardsEl.textContent = "Cards: "  // Selecting the cardsEl to display "Cards:"
-    for (let i = 0; i < cards.length; i++) { // For every element that is inside the cards array
-        cardsEl.textContent += cards[i] + " " // Add the element that is inside the array by its index provided by the count
-                                              // to the cardsEl.textContent till it reaches the maximum number of elements inside the array.
-                                              // which is done by comparing the count to the arrays length "cards.length"
+function renderGame() {                         // creating a function to continue the game. 
+    cardsEl.textContent = "Cards: "             // Selecting the cardsEl to display "Cards:"
+    for (let i = 0; i < cards.length; i++) {    // For every element that is inside the cards array
+        cardsEl.textContent += cards[i] + " "   // Add the element that is inside the array by its index provided by the count
+                                                // to the cardsEl.textContent till it reaches the maximum number of elements inside the array.
+                                                // which is done by comparing the count to the arrays length "cards.length"
         }
 
-        sumEl.textContent = "Sum: " + sum // Select sumEl to desplay the total sum of the card values.
+        sumEl.textContent = "Sum: " + sum       // Select sumEl to desplay the total sum of the card values.
         if (sum <= 20) {
             message = "Do you want to draw another card?";
         } else if (sum === 21) {
