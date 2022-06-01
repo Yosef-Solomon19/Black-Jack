@@ -50,5 +50,15 @@ body {
 
 #message-el {
     font-style: italic;
+}
 
+.button-style {
+    width: 250px;
+    color: #016f32;
+    background: goldenrod;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 25px;
 }
