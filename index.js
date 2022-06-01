@@ -13,20 +13,25 @@ let isAlive = true;
 // message variable
 let message='';
 
+// 
+function startGame() {
+    // Adding conditional statement for sum result
+    if (sum <= 20) {
+        message="Do you want to draw a new card ?";  
 
-// Adding conditional statement for sum result
-if (sum <= 20) {
-    message="Do you want to draw a new card ?";  
+    } else if (sum === 21) {
+        message="Sweet! You've got Blackjack! 🥳.";
+        hasBlackJack = true;
+        isAlive = true;
 
-} else if (sum === 21) {
-    message="Sweet! You've got Blackjack! 🥳.";
-    hasBlackJack = true;
-    isAlive = true;
+    } else {
+        message="You're out of the game! 😭.";
+        isAlive = false;
+    }
 
-} else {
-    message="You're out of the game! 😭.";
-    isAlive = false;
-}
+};
+
+
 
 console.log(message)
 
