@@ -1,13 +1,33 @@
 'use strict';
 
 let firstCard = 10;
-let secondCard = 11; 
+let secondCard = 10; 
 let sum = firstCard + secondCard; 
 
+// Adding hasblackjack variable to keep track when you've landed a blackjack 
+let hasBlackJack = false;
+
+// Add isAlive variable
+let isAlive = true;
+
+// message variable
+let message='';
+
+
+// Adding conditional statement for sum result
 if (sum <= 20) {
-    console.log("Do you want to draw a new card.");
+    message="Do you want to draw a new card ?";  
+
 } else if (sum === 21) {
-    console.log("Sweet! You've got Blackjack! 🥳.");
+    message="Sweet! You've got Blackjack! 🥳.";
+    hasBlackJack = true;
+    isAlive = true;
+
 } else {
-    console.log("You're out of the game! 😭.");
+    message="You're out of the game! 😭.";
+    isAlive = false;
 }
+
+console.log(message)
+
+
