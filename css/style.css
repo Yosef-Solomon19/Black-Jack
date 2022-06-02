@@ -52,9 +52,11 @@ body {
     font-style: italic;
 }
 
-.start-button {
+button {
     width: 250px;
     color: #016f32;
+    display: block;
+    margin: 0 auto;
     background: goldenrod;
     border: none;
     border-radius: 2px;
@@ -62,6 +64,8 @@ body {
     padding: 5px 0;
     font-size: 25px;
     cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .start-button:active {
