@@ -24,10 +24,10 @@ function getRandomCard (){
     let randomNumber = Math.floor((Math.random() * 13) + 1 ); // Picks a random number betwwen 1 and 13 
     // console.log(randomNumber);
     // return Math.floor(Math.random()*(12-2 + 1) + 2); Picks a random number between 2 to 11.
-    if (randomNumber === 1) {
-        return 11;
-    } else if (randomNumber >= 11 && randomNumber <= 13) {
+    if (randomNumber > 10) {
         return 10;
+    } else if (randomNumber === 1) {
+        return 1;
     } else {
         return randomNumber;
     };
