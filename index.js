@@ -26,7 +26,7 @@ function getRandomCard (){
         return 10;
     } else if (randomNumber === 1) {
         return 1;
-    } else {
+    } else { 
         return randomNumber;
     };
 }
@@ -38,7 +38,7 @@ function startGame() {
     let firstCard = getRandomCard ();
     let secondCard = getRandomCard (); 
     sum = firstCard + secondCard;
-    cards.push(firstCard, secondCard);
+    cards = [firstCard,secondCard];// cards.push(firstCard, secondCard);
     renderGame();
 }
 
