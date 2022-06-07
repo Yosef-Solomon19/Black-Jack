@@ -1,7 +1,7 @@
 'use strict';
 
-let firstCard = 10;
-let secondCard = 5; 
+let firstCard = getRandomCard ();
+let secondCard = getRandomCard (); 
 let sum = firstCard + secondCard; 
 let cards = [firstCard, secondCard]; // create an array to have a list of cards
 
@@ -19,14 +19,27 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-// create start game funciton to call renderGame function for start game button
+// create function getRandomCard() returns a random value for the first, second and newCard()
+function getRandomCard (){
+    return Math.floor((Math.random() * 13) + 1 ); // Picks a random number betwwen 1 and 13 
+    // return Math.floor(Math.random()*(12-2 + 1) + 2); // Picks a random number between 2 to 11.
+}
+
+
+// create start game function to call renderGame function for start game button
 function startGame() {
     renderGame();
 }
 
 function renderGame() {
     sumEl.textContent = `Sum: ${sum}`;
-    cardsEl.textContent = `Cards: ${cards[0]} ${cards[1]}`;
+    cardsEl.textContent = `Cards: `;
+    // loop through cards inside cards array and display them.
+    for (let i = 0; i < cards.length; i++){
+        cardsEl.textContent += `${cards[i]} `;
+    }
+
+    
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂";
     } else if (sum === 21) {
@@ -41,15 +54,21 @@ function renderGame() {
 
 // function to draw new cards 
 function newCard () {
-    let card = Math.floor(Math.random()*(12-2 + 1) + 2); // Picks a random number between 2 to 11.
+    let card = getRandomCard ();
     console.log(card);
     cards.push(card);
     sum += card; 
-    renderGame();
-    
+    renderGame();    
 }
 
 
 
 
 
+// Stretch goals 
+// When player receives 11 or ace ask player if they want 11 to be 1 or 11 ? 
+//
+//
+//
+//
+//
