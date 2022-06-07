@@ -65,11 +65,17 @@ function renderGame() {
 
 // function to draw new cards 
 function newCard () {
-    let card = getRandomCard ();
-    // console.log(card);
-    cards.push(card);
-    sum += card; 
-    renderGame();    
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard ();
+        cards.push(card);
+        sum += card; 
+        renderGame();         
+    }
+    // let card = getRandomCard ();
+    // // console.log(card);
+    // cards.push(card);
+    // sum += card; 
+    // renderGame();    
 }
 
 
