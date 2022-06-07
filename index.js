@@ -1,15 +1,13 @@
 'use strict';
 
-let firstCard = getRandomCard ();
-let secondCard = getRandomCard (); 
-let sum = firstCard + secondCard; 
-let cards = [firstCard, secondCard]; // create an array to have a list of cards
+let sum = 0; 
+let cards = []; // create an array to have a list of cards
 
 // Adding hasblackjack variable to keep track when you've landed a blackjack 
 let hasBlackJack = false;
 
 // Add isAlive variable
-let isAlive = true;
+let isAlive = false;
 
 // message variable
 let message='';
@@ -36,6 +34,11 @@ function getRandomCard (){
 
 // create start game function to call renderGame function for start game button
 function startGame() {
+    isAlive = true;
+    let firstCard = getRandomCard ();
+    let secondCard = getRandomCard (); 
+    sum = firstCard + secondCard;
+    cards.push(firstCard, secondCard);
     renderGame();
 }
 
