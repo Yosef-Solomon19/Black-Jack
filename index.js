@@ -3,6 +3,15 @@
 let sum = 0; 
 let cards = []; // create an array to have a list of cards
 
+//Create player object with two keys, name and chips 
+let player = {
+    name: "Joe",
+    chips: 125
+};
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = `${player.name} $${player.chips}`;
+
 // Adding hasblackjack variable to keep track when you've landed a blackjack 
 let hasBlackJack = false;
 
@@ -84,8 +93,9 @@ function newCard () {
 
 // Stretch goals 
 // When player receives 11 or ace ask player if they want 11 to be 1 or 11 ? 
-//
-//
+// Add a fixed amount of credits to start with before game starts
+// Provide how much to bet: 5, 10, 15 
+// if credit amount is less than 0 prevent game from starting. 
 //
 //
 //
